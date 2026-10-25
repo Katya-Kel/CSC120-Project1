@@ -1,0 +1,72 @@
+﻿1. Calculate dental records data  
+1.1 Show the welcome message 
+1.2 Obtain family size 
+1.2.1 Ask the user how many people are in the family 
+1.2.2 While the number is less than 1 or more than 6 
+1.2.2.1 Say it is invalid 
+1.2.2.2 Ask again
+1.2.3 Give the number back
+        1.3 Make an empty list of names and an empty 3D array of teeth (person, upper/lower, tooth number) 
+1.4 Acquire family data
+        1.4.1 For each person in the family 
+1.4.1.1 Ask for their name and store it 
+1.4.1.2 Obtain teeth row for the uppers
+1.4.1.3 Obtain teeth row for the lowers 
+        1.5 Obtain menu choice  
+1.6 While the choice is not X 
+1.6.1 If the choice is P, print records  
+1.6.2 Otherwise if the choice is E, extract tooth
+1.6.3 Otherwise (the choice is R), report root canals 
+1.6.4 Obtain menu choice again
+1.7 Show the exit message 
+2. Obtain teeth row 
+2.1 Ask the user to type the teeth as letters 
+2.2 While the letters are not valid or there are more than 8 
+2.2.1 Say what is wrong like invalid types or too many teeth 
+2.2.2 Ask again 
+2.3 Copy the letters into the row 
+2.4 Fill any empty spots at the end of the row with a space
+3. Test teeth validity 
+3.1 For each letter in the input 
+3.1.1 If it is not I, B or M, give back false 
+3.2 Give back true
+4. Obtain menu choice 
+4.1 Show the menu: (P)rint, (E)xtract, (R)oot, e(X)it 
+4.2 Ask for a choice 
+4.3 While the choice is not P, E, R or X 
+4.3.1 Say it is invalid 
+4.3.2 Ask again 
+4.4 Give back the choice
+5. Print records
+5.1 For each person 
+5.1.1 Show their name 
+5.1.2 Print row for the uppers  
+5.1.3 Print row for the lowers 
+6. Print row  
+6.1 For each spot in the row 
+6.1.1 If the spot is not empty, show its number and its letter
+7. Extract tooth 
+7.1 Ask for the family member's name 
+7.2 While the name is not found, say invalid and ask again 
+7.3 Ask for the layer, U (upper) or L (lower) 
+7.4 While it is not U or L, say invalid and ask again 
+7.5 Ask for the tooth number 
+7.6 While the number is not 1 to 8, or the spot is empty, or the tooth is already missing
+ 7.6.1 Say what is wrong 
+ 7.6.2 Ask again 
+7.7 Change that tooth to M (missing)
+8. Find family member
+8.1 For each person 
+8.1.1 If their name matches, give back their position 
+8.2 Give back -1 because no one matched 
+9. Report root canals  
+9.1 Start incisors, bicuspids and missing all at 0 
+9.2 Go through every tooth of every person 
+9.2.1 If it is I, add 1 to incisors 
+9.2.2 If it is B, add 1 to bicuspids 
+9.2.3 If it is M, add 1 to missing 
+9.3 If there are no incisors, say there are no root canals 
+9.4 Otherwise 
+9.4.1 Work out discriminant = bicuspids squared + 4 x incisors x missing 
+9.4.2 Work out the two roots with the quadratic formula 
+9.4.3 Show both roots with 2 decimal places
